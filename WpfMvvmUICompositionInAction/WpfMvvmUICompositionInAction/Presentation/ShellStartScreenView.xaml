@@ -1,0 +1,54 @@
+﻿<UserControl x:Class="WpfMvvmUICompositionInAction.Presentation.ShellStartScreenView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:pr="clr-namespace:WpfMvvmUICompositionInAction.Presentation"
+             mc:Ignorable="d" 
+             d:DesignHeight="397" d:DesignWidth="750">
+    
+    <Grid>
+
+        <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled">
+
+            <WrapPanel Margin="5,5,5,0" Orientation="Vertical">
+
+                <WrapPanel.Resources>
+                    <Style TargetType="Button">
+                        <Setter Property="Width" Value="248"/>
+                        <Setter Property="Height" Value="120"/>
+                        <Setter Property="Margin" Value="0,0,5,5"/>
+                        <Setter Property="Content" Value="I'm a tile, trust me!"/>
+                        <Setter Property="Command" Value="{Binding Path=OpenView}"/>
+                    </Style>
+                </WrapPanel.Resources>
+
+                <Button Content="Composite App" CommandParameter="{x:Static pr:KnownApps.CompositeApp}" />
+                <Button Content="Common App" CommandParameter="{x:Static pr:KnownApps.CommonApp}" />
+                <Button />
+                <Button />
+                <Button />
+                <Button />
+                <Button />
+                <Button />
+                <Button />
+                <Button />
+                <Button />
+                <Button />
+                <Button />
+                <Button />
+                <Button />
+                <Button />
+                <Button />
+                <Button />
+                <Button />
+                <Button />
+                <Button />
+
+            </WrapPanel>
+
+        </ScrollViewer>
+
+    </Grid>
+    
+</UserControl>
